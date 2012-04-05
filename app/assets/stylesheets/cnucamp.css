@@ -2,7 +2,7 @@
 
 *{border:0px solid #eee;margin:0;padding:0;list-style:none}
 html,body,#bg,#bg table,#bg td,#cont{width:100%;height:100%;overflow:hidden}
-body{font-family:Arial,Helvetica,sans-serif;font-size:10px;cursor:default;background:url(loading.gif);color:#000}
+body{font-family:Arial,Helvetica,sans-serif;font-size:11px;cursor:default;background:url(loading.gif);color:#000}
 h1,h2,.large,.left{font-family:"Century Gothic","Lucida Grande",Arial,sans-serif;font-size:40px}
 h2,.box div img{padding-bottom:10px}
 a{text-decoration:none;color:#000;outline:0}
@@ -12,14 +12,14 @@ img{display:block}
 #bg td{vertical-align:middle;text-align:center}
 #bg img{min-height:50%;min-width:50%;margin:0 auto}
 #cont{position:absolute;top:0;left:0;z-index:70;overflow:auto}
-#menu{position:absolute;bottom:20px;left:141px;z-index:80;width:100%;line-height:12px}
+#menu{position:absolute;bottom:20px;left:141px;z-index:80;width:100%;line-height:13px}
 #menu div{height:56px;background:#000;opacity:0.6;filter:alpha(opacity=60);padding:7px 0 0 7px}
 
 h1{position:relative;left:-141px;margin-bottom:-63px;width:140px;opacity:0.99}
 h1 a{padding:41px 10px 10px 0;color:#fff;background:#000 url(go.gif) 0 -30px repeat-x;font-size:11px;text-align:right;display:block}
 h1 a:hover{background:#000 url(go.gif) 0 43px repeat-x}
-ul{float:left;width:110px}
-li a{height:12px;padding:0 5px;font-weight:bold;color:#999;display:block}
+ul{float:left;width:130px}
+li a{height:13px;padding:0 5px;font-weight:bold;color:#999;display:block}
 li a:hover,li.cur a{color:#fff}
 
 .box{position:absolute;top:15%;right:200px;width:500px;padding-bottom:100px}
