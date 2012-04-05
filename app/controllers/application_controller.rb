@@ -2,6 +2,19 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  def after_sign_up_path_for(resource)
+    introduction_path
+  end
+  def after_inactive_sign_up_path_for(resource)
+    introduction_path
+  end
+  def after_sign_out_path_for(resource_or_scope)
+    introduction_path
+  end
+  def after_sign_in_path_for(resource_or_scope)
+    introduction_path
+  end
+
   def render_404
     render_optional_error_file(404)
   end

@@ -64,6 +64,23 @@ class User
   attr_accessible :name, :email, :location, :bio, :website, :github, :tagline, :avatar, :password, :password_confirmation,:phone
 
   validates :login, :format => {:with => /\A\w+\z/, :message => '只允许数字、大小写字母和下划线'}, :length => {:in => 3..20}, :presence => true, :uniqueness => {:case_sensitive => false}
+  validates :name, :presence=>true
+  validates :phone, :format=>/^\d{11}$/
+  validate :vali_name_check
+  def vali_name_check
+    if Util.js_strlen(self.name)>12
+      errors.add(:name,"不能多于6个汉字或者12个字符")
+      return false
+    end
+    if Util.js_chinese(self.name)<2
+      errors.add(:name,"不是真实中文姓名")
+      return false
+    end
+    if !Webservice.check_if_name_is_okay(self.name)
+      errors.add(:name,"请输入真实中文姓名 (如果系统误判你的姓名，请换个名字先注册，注册后可再改名)")
+      return false
+    end
+  end
 
   has_and_belongs_to_many :following_nodes, :class_name => 'Node', :inverse_of => :followers
   has_and_belongs_to_many :following, :class_name => 'User', :inverse_of => :followers

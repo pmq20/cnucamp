@@ -1,5 +1,19 @@
 # coding: utf-8
 class AccountController < Devise::RegistrationsController
+
+  def after_sign_up_path_for(resource)
+    introduction_path
+  end
+  def after_inactive_sign_up_path_for(resource)
+    introduction_path
+  end
+  def after_sign_out_path_for(resource_or_scope)
+    introduction_path
+  end
+  def after_sign_in_path_for(resource_or_scope)
+    introduction_path
+  end
+
   def edit
     @user = current_user
     # 首次生成用户 Token
