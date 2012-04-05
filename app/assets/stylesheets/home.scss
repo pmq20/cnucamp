@@ -1,0 +1,34 @@
+#home_index { line-height:160%; }
+#home_index h2 { margin-top:10px; font-size:14px; line-height:200%;}
+
+#last_topics { float:left; width:450px; }
+#hot_topics { float:right; width:450px; }
+.topics h2 { font-size:14px; margin-bottom:8px;}
+.topics ul li { line-height:160%;}
+.topics ul li a:link,
+.topics ul li a:visited { color:#2C64D7;}
+.topics ul li .node { color:#666; margin-right:5px;}
+.topics ul li .node a:link,
+.topics ul li .node a:visited { color:#666; }
+
+.home_suggest_topics {
+  position:relative;
+  .box { 
+    width:440px; 
+    ol {
+      margin:0;
+      list-style-position: inside;
+      
+      li { height:22px; line-height:22px; overflow: hidden; white-space: nowrap; text-overflow:ellipsis;}
+      a { margin-right:10px; color:green; }
+    }
+    .count { font-size:12px; }
+  }
+  .high_likes_topics {
+    top:0; right:1px;
+    position:absolute;
+    ol {
+      a { color:#A84137;}
+    }
+  }
+}
