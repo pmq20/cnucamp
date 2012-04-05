@@ -3,4 +3,8 @@ class CnucampController < ApplicationController
     @randoms = Dir.glob("#{Rails.root}/app/assets/images/bg/*.jpg").to_a
     @bg_file = @randoms[Random.new.rand(0..@randoms.size-1)]
   end
+  
+  def album
+    render :layout => 'application'
+  end
 end

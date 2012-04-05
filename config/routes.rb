@@ -13,7 +13,9 @@ Cnucamp::Application.routes.draw do
   resources :notes
   match "/uploads/*path" => "gridfs#serve"
   match "/introduction" => "home#index", :as => :introduction
+  match "/album" => "cnucamp#album",:as => :album
   root :to => "cnucamp#index"
+  
 
   devise_for :users, :path => "account", :controllers => {
       :registrations => :account,
