@@ -14,6 +14,9 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource_or_scope)
     introduction_path
   end
+  def after_update_path_for(resource)
+    users_path
+  end
 
   def render_404
     render_optional_error_file(404)

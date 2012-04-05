@@ -28,8 +28,8 @@
          <%= render_list :class => "nav" do |li|
            li << link_to(t("menu.introduction"), introduction_path)
            li << link_to(t("menu.topics"), topics_path)
-           li << link_to(t("menu.photos"), album_path)
            li << link_to(t("menu.users"), users_path)
+           li << link_to(t("menu.photos"), album_path)
          end %>
         <%= render "common/search_form" %>
         <%= render "common/user_nav" %>
