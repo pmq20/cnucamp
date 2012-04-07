@@ -1,0 +1,5 @@
+#!/bin/bash -x
+
+thin start -O -C config/thin.yml
+./script/resque start
+bundle exec rake sunspot:solr:start

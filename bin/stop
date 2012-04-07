@@ -1,0 +1,5 @@
+#!/bin/bash -x
+
+./script/resque stop
+bundle exec rake sunspot:solr:stop
+kill -9 `cat tmp/pids/thin.7000.pid` `cat tmp/pids/thin.7001.pid`

@@ -26,6 +26,5 @@ vendor/ruby
 doc/wiki_repo
 solr/data/
 solr/pids/
-bin/
 tags
 data_backups/

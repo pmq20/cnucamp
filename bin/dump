@@ -1,0 +1,10 @@
+#!/bin/bash -x
+# Make sure you are in the Rails.root directory!!
+
+rm -rf data_backups/dump
+/usr/local/bin/mongodump --db cnucamp -o data_backups/dump
+STR=$(date +%s)
+tar czf data_backups/dump.$STR.tar.gz data_backups/dump
+
+echo scp root@cnucamp.org:$PWD/data_backups/dump.$STR.tar.gz data_backups
+touch tmp/cnucamp_backed_up
