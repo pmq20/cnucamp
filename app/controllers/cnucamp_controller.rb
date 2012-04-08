@@ -5,6 +5,7 @@ class CnucampController < ApplicationController
   end
   
   def album
+    @very_simple_page = true
     render :layout => 'application'
   end
 end

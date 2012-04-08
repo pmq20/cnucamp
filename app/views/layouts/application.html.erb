@@ -37,30 +37,39 @@
     </div>
   </div>
   
-  <div class="container">
-    <%= render_breadcrumb %>
-    <%= render "common/feeds" %>
-
-    <%= notice_message %>
-    <div id="main" class="container-fluid">
-      <%= yield %>
-    </div>    
-  </div>
-  
-  <% if not mobile? %>
-  <a class="go_top" href="#"><i class="icon icons_go_top"></i></a>
-  <footer class="footer">
+  <%if @very_simple_page%>
+    <%= yield %>
+  <%else%>
     <div class="container">
-      <%= raw SiteConfig.footer_html %>
+      <%= render_breadcrumb %>
+      <%= render "common/feeds" %>
+
+      <%= notice_message %>
+      <div id="main" class="container-fluid">
+        <%= yield %>
+      </div>    
     </div>
-  </footer>
-  <% end %>
+    
+    <% if not mobile? %>
+    <a class="go_top" href="#"><i class="icon icons_go_top"></i></a>
+    <footer class="footer">
+      <div class="container">
+        <%= raw SiteConfig.footer_html %>
+      </div>
+    </footer>
+    <% end %>
+  <% end%>
   
   <%= javascript_include_tag "app" %>
   <% if mobile? %>
     <script type="text/javascript">app_mobile = true;</script>
   <% end %>
   <%= yield :scripts %>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    <%= yield :butt2 %>
+  });
+  </script>
   <%= render :partial => "common/google_analytics"%>
   
 </body>
