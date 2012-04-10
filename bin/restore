@@ -1,9 +1,6 @@
 #!/bin/bash -x
 # Make sure you are in the Rails.root directory!!
 
-source ./git_sensitive.sh
-
 rm -rf data_backups/dump
 tar xzf $1
 mongorestore --drop data_backups/dump
-mysql -u root -p$GIT_SENSITIVE_MYSQL_PASSWORD ultrax < data_backups/ultrax.backup.sql

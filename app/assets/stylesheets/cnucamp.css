@@ -1,4 +1,7 @@
-@import url('yui-reset.css');
+/*
+ *= require yui-reset.css
+ *= require_self
+ */
 
 *{border:0px solid #eee;margin:0;padding:0;list-style:none}
 html,body,#bg,#bg table,#bg td,#cont{width:100%;height:100%;overflow:hidden}
