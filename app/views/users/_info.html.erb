@@ -7,9 +7,13 @@
     <ul>
         <li class="with_nbsp"><span>&nbsp;</span>第 <%= @user.id %> 位<%= t("menu.users")%></li>
         <li><span>ID:</span><strong><%= @user.login %></strong></li>
-        <% if !@user.name.blank? %>
-        <li><span>Name:</span><strong><%= @user.name %></strong></li>
+        <% if current_user and !@user.name.blank? %>
+        <li><span>真实姓名:</span><strong><%= @user.name %></strong></li>
         <% end %>
+        <% if current_user and !@user.phone.blank? %>
+        <li><span>手机:</span><strong><%= @user.phone %></strong></li>
+        <% end %>
+
         <% if !@user.location.blank? %>
              <li><span><%= t("users.city")%>:</span><%= location_name_tag(@user.location) %></li>
         <% end %>
