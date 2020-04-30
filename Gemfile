@@ -1,14 +1,14 @@
 source 'http://ruby.taobao.org'
 
-gem "rails", "3.2.2"
+gem "rails", "4.0.0"
 gem "rails-i18n","0.1.8"
-gem "jquery-rails", "1.0.16"
+gem "jquery-rails", "2.0.1"
 gem "rails_autolink", ">= 1.0.4"
 gem "jquery-atwho-rails", "0.1.3"
 
 group :assets do
-  gem 'sass-rails', "  ~> 3.2.3"
-  gem 'coffee-rails', "~> 3.2.1"
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'coffee-rails', '~> 4.0.0'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -57,7 +57,7 @@ gem "pygments.rb", '~> 0.2.4'
 # YAML 配置信息
 gem "settingslogic", "~> 2.0.6"
 
-gem "cells", "3.7.1"
+gem "cells", "3.8.7"
 
 # 队列
 gem "resque", "~> 1.20.0", :require => "resque/server"
@@ -87,7 +87,7 @@ gem 'daemon-spawn'
 gem 'quiet_assets', :git => 'git://github.com/AgilionApps/quiet_assets.git'
 
 # Github API
-gem 'ruby-github'
+gem 'ruby-github', '>= 0.0.3'
 
 # API
 gem 'grape', :git => 'git://github.com/intridea/grape.git', :branch => 'frontier'
@@ -98,10 +98,10 @@ group :development, :test do
   gem "memcache-client", "1.8.5"
   gem 'progress_bar'
   gem 'rspec-rails', '~> 2.8.1'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '>= 1.4.0'
   gem 'thin'
   gem "simplecov", :require => false
-  gem "rspec-cells"
+  gem "rspec-cells", ">= 0.1.3"
   gem "capybara"
   gem "sunspot-rails-tester"
 end
