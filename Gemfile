@@ -1,25 +1,25 @@
 source 'http://ruby.taobao.org'
 
-gem "rails", "3.2.2"
+gem "rails", "5.2.4.3"
 gem "rails-i18n","0.1.8"
-gem "jquery-rails", "1.0.16"
+gem "jquery-rails", "4.0.1"
 gem "rails_autolink", ">= 1.0.4"
 gem "jquery-atwho-rails", "0.1.3"
 
 group :assets do
-  gem 'sass-rails', "  ~> 3.2.3"
-  gem 'coffee-rails', "~> 3.2.1"
+  gem 'sass-rails', '~> 5.0.5'
+  gem 'coffee-rails', '~> 4.2.2'
   gem 'uglifier', '>= 1.0.3'
 end
 
 # 上传组件
-gem 'carrierwave', '0.5.7'
-gem 'carrierwave-mongoid', '0.1.2', :require => 'carrierwave/mongoid'
+gem 'carrierwave', '0.6.0'
+gem 'carrierwave-mongoid', '0.8.0', :require => 'carrierwave/mongoid'
 gem 'carrierwave-upyun', '0.1.3'
 gem 'mini_magick','3.3'
 
 # Mongoid 辅助插件
-gem "mongoid", "2.4.3"
+gem "mongoid", "6.0.0"
 gem "bson_ext", "1.5.2"
 gem 'mongo-rails-instrumentation','0.2.4'
 gem 'mongoid_auto_increment_id', "0.4.0"
@@ -30,7 +30,7 @@ gem 'devise', '1.5.2'
 
 # 分页
 gem 'will_paginate', '3.0.2'
-gem 'will_paginate_mongoid', '~> 1.0.2'
+gem 'will_paginate_mongoid', '~> 1.1.0'
 gem 'bootstrap-will_paginate', '0.0.3'
 
 # 三方平台 OAuth 验证登陆
@@ -57,11 +57,11 @@ gem "pygments.rb", '~> 0.2.4'
 # YAML 配置信息
 gem "settingslogic", "~> 2.0.6"
 
-gem "cells", "3.7.1"
+gem "cells", "3.8.7"
 
 # 队列
 gem "resque", "~> 1.20.0", :require => "resque/server"
-gem "resque_mailer", '2.0.2'
+gem "resque_mailer", "2.0.2"
 
 # AWS Simple Email Server
 gem "aws-ses", "~> 0.4.3"
@@ -98,10 +98,10 @@ group :development, :test do
   gem "memcache-client", "1.8.5"
   gem 'progress_bar'
   gem 'rspec-rails', '~> 2.8.1'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '>= 1.4.0'
   gem 'thin'
   gem "simplecov", :require => false
-  gem "rspec-cells"
+  gem "rspec-cells", ">= 0.1.3"
   gem "capybara"
   gem "sunspot-rails-tester"
 end
