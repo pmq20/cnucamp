@@ -1,14 +1,14 @@
 source 'http://ruby.taobao.org'
 
-gem "rails", "3.2.2"
+gem "rails", "5.0.0"
 gem "rails-i18n","0.1.8"
-gem "jquery-rails", "1.0.16"
+gem "jquery-rails", "4.4.0"
 gem "rails_autolink", ">= 1.0.4"
 gem "jquery-atwho-rails", "0.1.3"
 
 group :assets do
-  gem 'sass-rails', "  ~> 3.2.3"
-  gem 'coffee-rails', "~> 3.2.1"
+  gem 'sass-rails', '~> 5.0.5'
+  gem 'coffee-rails', '~> 4.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -35,7 +35,7 @@ gem 'bootstrap-will_paginate', '0.0.3'
 
 # 三方平台 OAuth 验证登陆
 gem "omniauth", "~> 1.0.1"
-gem 'omniauth-openid', "~> 1.0.1"
+gem 'omniauth-openid', '~> 1.0.1'
 gem "omniauth-github", "~> 1.0.0"
 gem "omniauth-twitter", "~> 0.0.7"
 gem "omniauth-douban", :git => "git://github.com/ballantyne/omniauth-douban.git"
@@ -57,11 +57,11 @@ gem "pygments.rb", '~> 0.2.4'
 # YAML 配置信息
 gem "settingslogic", "~> 2.0.6"
 
-gem "cells", "3.7.1"
+gem "cells", "3.8.7"
 
 # 队列
 gem "resque", "~> 1.20.0", :require => "resque/server"
-gem "resque_mailer", '2.0.2'
+gem "resque_mailer", "2.0.2"
 
 # AWS Simple Email Server
 gem "aws-ses", "~> 0.4.3"
@@ -98,16 +98,16 @@ group :development, :test do
   gem "memcache-client", "1.8.5"
   gem 'progress_bar'
   gem 'rspec-rails', '~> 2.8.1'
-  gem 'factory_girl_rails'
-  gem 'thin'
+  gem 'factory_girl_rails', '>= 1.4.0'
+  gem 'thin', '>= 1.3.1'
   gem "simplecov", :require => false
-  gem "rspec-cells"
-  gem "capybara"
+  gem "rspec-cells", ">= 0.1.3"
+  gem "capybara", ">= 1.1.2"
   gem "sunspot-rails-tester"
 end
 
 group :production do
-  gem "unicorn"
+  gem "unicorn", ">= 4.1.1"
   gem 'dalli', '1.1.1'
 end
 
