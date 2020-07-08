@@ -2,7 +2,7 @@ source 'http://ruby.taobao.org'
 
 gem "rails", "3.2.2"
 gem "rails-i18n","0.1.8"
-gem "jquery-rails", "1.0.16"
+gem "jquery-rails", "3.1.3"
 gem "rails_autolink", ">= 1.0.4"
 gem "jquery-atwho-rails", "0.1.3"
 
